@@ -1,0 +1,17 @@
+name: Feature proposal
+description: Propose a metadata-only marketplace capability
+title: "[Proposal] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+    validations:
+      required: true
+  - type: textarea
+    id: boundary
+    attributes:
+      label: Trust and execution boundary
+    validations:
+      required: true
