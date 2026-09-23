@@ -5,10 +5,8 @@ import type {
   VegaPluginMarketplaceEntry,
 } from "@haneoka/vega-protocol";
 
-export const ALTAIR_PLUGIN_CATALOG_FORMAT =
-  "vega-plugin-catalog" as const;
-export const LEGACY_ALTAIR_PLUGIN_CATALOG_FORMAT =
-  "altair-plugin-catalog" as const;
+export const ALTAIR_PLUGIN_CATALOG_FORMAT = "vega-plugin-catalog" as const;
+export const LEGACY_ALTAIR_PLUGIN_CATALOG_FORMAT = "altair-plugin-catalog" as const;
 export const ALTAIR_PLUGIN_CATALOG_MAX_BYTES = 2 * 1024 * 1024;
 export const ALTAIR_PLUGIN_CATALOG_MAX_ENTRIES = 10_000;
 export const ALTAIR_PLUGIN_CATALOG_MAX_URL_LENGTH = 4_096;
@@ -30,9 +28,7 @@ export interface AltairPluginAuthoringExtension {
 
 export interface AltairPluginCatalogExtensions {
   readonly altair?: {
-    readonly entries: Readonly<
-      Record<string, AltairPluginAuthoringExtension>
-    >;
+    readonly entries: Readonly<Record<string, AltairPluginAuthoringExtension>>;
   };
 }
 
@@ -73,8 +69,7 @@ export interface LoadAltairPluginCatalogOptions {
   readonly signal?: AbortSignal;
 }
 
-export interface AltairPluginTargetEnvironment
-  extends VegaPluginLockTarget {
+export interface AltairPluginTargetEnvironment extends VegaPluginLockTarget {
   readonly altairVersion?: string;
   readonly altairApiVersion?: number;
   readonly grantedPermissions?: readonly string[];
